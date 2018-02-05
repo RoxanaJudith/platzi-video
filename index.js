@@ -9,4 +9,7 @@ const app = document.getElementById('app')
 //ReactDOM.render(holaMundo, app);
 
 //ReactDOM.render(<Media/>,app);
-render(<Media/>,app);
+//render(<Media/>,app);     METODO HARD
+render(<Media title="¿Que es responsive Desing?" autor="RoxanaJudith" image="./images/covers/responsive.jpg"/>,app);
+
+
