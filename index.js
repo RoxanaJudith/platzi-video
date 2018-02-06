@@ -10,6 +10,7 @@ const app = document.getElementById('app')
 
 //ReactDOM.render(<Media/>,app);
 //render(<Media/>,app);     METODO HARD
-render(<Media title="¿Que es responsive Desing?" autor="RoxanaJudith" image="./images/covers/responsive.jpg"/>,app);
+render(<Media title="¿Que es responsive Desing?" autor="RoxanaJudith" image="./images/covers/responsive.jpg" type="video"/>,app);
+//render(<Media title={25} autor={()=>{}} image="./images/covers/responsive.jpg"/>,app);//ejemplo para numeros y funciones
 
 

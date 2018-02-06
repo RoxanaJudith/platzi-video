@@ -1,9 +1,39 @@
 import React from 'react';
 //import React, {Component} from 'react';
 import './media.css';
+import PropTypes from 'prop-types';
 
 
 class Media extends React.Component{
+
+	//ECMAS 6 Enlazar eventos DOM
+	// constructor(props){   //cambios de estado
+	// 	super(props)
+	// 	this.state={
+	// 		autor:props.autor
+	// 	}
+	// }
+
+	//ECMAS 7	Enlazar eventos DOM (array function)
+	state={
+		autor:'Roxana Judith'
+	}
+	//ECMAS 6 Enlazar eventos DOM
+	// constructor(props){
+	// 	super(props)
+	// 	this.handleClick=this.handleClick.bind(this);
+	// }
+	// handleClick(event){
+	// 	console.log(this.props.title);
+	// }
+
+	//ECMAS 7	Enlazar eventos DOM (array function)
+	handleClick = (event)=>{
+		//console.log(this.props.title);
+		this.setState({   //cambios de estado
+			autor:'Ricardo Celis'
+		})
+	}
 	render(){
 		const styles ={
 			container:{
@@ -31,7 +61,7 @@ class Media extends React.Component{
 			 </div>			 
 			 </div>
 			 */
-			 <div className="Media">
+			 <div className="Media" onClick={this.handleClick}>
 			 <div className="Media-cover">
 			 	<img 
 			 	  src={this.props.image}
@@ -41,7 +71,9 @@ class Media extends React.Component{
 			 	  className="Media-image"
 			 	  />
 			 	  <h3 className="Media-title">{this.props.title}</h3>
-			 	  <p className="Media-autor">{this.props.autor}</p>
+			 	  {/*<p className="Media-autor">{this.props.autor}</p>*/} 
+			 	  <p className="Media-autor">{this.state.autor}</p> {/*cambio de estado*/}
+
 			 </div>			 
 			 </div>
 
@@ -49,4 +81,10 @@ class Media extends React.Component{
 	}
 }
 
+Media.propTypes={
+	image:PropTypes.string,
+	title:PropTypes.string.isRequired,
+	autor:PropTypes.string,
+	type:PropTypes.oneOf(['video','audio'])
+}
 export default Media;
