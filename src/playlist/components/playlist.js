@@ -1,6 +1,7 @@
 import React from 'react';
 import Media from './media.js';
 import './playlist.css';
+import Play from '../../icons/components/play';
 
 // class Playlist extends Component{
 // 	render(){
@@ -27,6 +28,10 @@ function Playlist (props){
 		console.log(props.data);
 		return(
 			<div className="Playlist">
+			<Play
+				size={50}
+				color="red"
+			/>
 				{
 					playlist.map((item)=>{						
 						return <Media {...item} key={item.id}/>
