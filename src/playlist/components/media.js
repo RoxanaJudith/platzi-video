@@ -1,10 +1,10 @@
-import React  from 'react';
+import React, {PureComponent}  from 'react';
 //import React, {Component} from 'react';
 import './media.css';
 import PropTypes from 'prop-types';
 
 
-class Media extends React.Component{
+class Media extends PureComponent{
 
 	//ECMAS 6 Enlazar eventos DOM
 	// constructor(props){   //cambios de estado
