@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 //import React, {Component} from 'react';
 import './media.css';
 import PropTypes from 'prop-types';
@@ -64,15 +64,15 @@ class Media extends React.Component{
 			 <div className="Media" onClick={this.handleClick}>
 			 <div className="Media-cover">
 			 	<img 
-			 	  src={this.props.image}
+			 	  src={this.props.cover}
 			 	  alt=""
-			 	  width={260}
+			 	  width={240}
 			 	  height ={160}
 			 	  className="Media-image"
 			 	  />
 			 	  <h3 className="Media-title">{this.props.title}</h3>
 			 	  {/*<p className="Media-autor">{this.props.autor}</p>*/} 
-			 	  <p className="Media-autor">{this.state.autor}</p> {/*cambio de estado*/}
+			 	  <p className="Media-autor">{this.props.autor}</p> {/*cambio de estado*/}
 
 			 </div>			 
 			 </div>
@@ -83,7 +83,7 @@ class Media extends React.Component{
 
 Media.propTypes={
 	image:PropTypes.string,
-	title:PropTypes.string.isRequired,
+	title:PropTypes.string,
 	autor:PropTypes.string,
 	type:PropTypes.oneOf(['video','audio'])
 }
