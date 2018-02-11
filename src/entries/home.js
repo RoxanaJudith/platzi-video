@@ -6,7 +6,7 @@ import {render} from 'react-dom';
 import Home from '../pages/containers/home';
 import data from '../api.json';
 
-const app = document.getElementById('app')
+const homeContainer = document.getElementById('home-container')
 // const holaMundo=<h1>Hola Mundo...!</h1>;
 // ReactDOM.render(que voy a renderizar, donde lo haré);
 //ReactDOM.render(holaMundo, app);
@@ -16,5 +16,5 @@ const app = document.getElementById('app')
 //render(<Media title="¿Que es responsive Desing?" autor="RoxanaJudith" image="./images/covers/responsive.jpg" type="video"/>,app);
 //render(<Media title={25} autor={()=>{}} image="./images/covers/responsive.jpg"/>,app);//ejemplo para numeros y funciones
 //render(<Playlist data={data}/>, app)
-render(<Home data={data}/>, app)
+render(<Home data={data}/>, homeContainer)
 
