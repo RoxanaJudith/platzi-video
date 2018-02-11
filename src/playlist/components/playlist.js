@@ -1,7 +1,7 @@
 import React from 'react';
 import Media from './media.js';
 import './playlist.css';
-import Play from '../../icons/components/play';
+//import Play from '../../icons/components/play';
 
 // class Playlist extends Component{
 // 	render(){
@@ -24,16 +24,12 @@ import Play from '../../icons/components/play';
 
 //Componente funcional
 function Playlist (props){	
-		const playlist = props.data.categories[0].playlist
-		console.log(props.data);
+		//const playlist = props.data.categories[0].playlist
+		//console.log(props.data);
 		return(
-			<div className="Playlist">
-			<Play
-				size={50}
-				color="red"
-			/>
+			<div className="Playlist">			
 				{
-					playlist.map((item)=>{						
+					props.playlist.map((item)=>{						
 						return <Media {...item} key={item.id}/>
 					})
 				}			
